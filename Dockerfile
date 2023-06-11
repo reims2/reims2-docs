@@ -1,4 +1,4 @@
-FROM node:16 AS build
+FROM node:20 AS build
 RUN apt-get update && apt-get install -y --no-install-recommends dumb-init
 
 WORKDIR /usr/src/app
@@ -8,7 +8,7 @@ RUN yarn build
 RUN yarn workspaces focus --production
 
 # PROD IMAGE
-FROM node:16.20.0-bullseye-slim
+FROM node:20.3.0-bullseye-slim
 RUN apt-get update && apt-get upgrade -y
 
 ENV NODE_ENV production
