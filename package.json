@@ -8,7 +8,7 @@
     "email": "substantialimpulse@pm.me"
   },
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "repository": "reims2-docs/reims2-docs",
   "scripts": {
